@@ -8,7 +8,35 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
+    <style>
+       .bg-custom {
+          background-color: #004080;
+      }
+      .jumbotronbackground{
+          background-image: url("https://placeimg.com/1000/500/animal/grayscale");
+          min-height: 50%;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: center;
+          background-size: cover;
+      }
+      .listing-title {
+      margin: 3px 0 5px 0;
+      width: 85%;
+      } 
+      .page-title {
+      margin: 0 0 30px 0;
+      } 
+      .innerimg{
+        overflow: hidden;
+      }
+      .innerimg img{
+        transition: all 1.5s ease;
+      }
+      .innerimg:hover img{
+        transform: scale(1.2);
+      }
+    </style>
 </head>
 <body>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm sticky-yop">
@@ -23,16 +51,15 @@
         <a class="btn btn-outline-primary" href="#">Sign up</a>
     </div>
 
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1>Album example</h1>
-            <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-            <p>
-            <a href="#" class="btn btn-primary my-2">Main call to action</a>
-            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-            </p>
-        </div>
-    </section>
+    <div class="jumbotron jumbotronbackground">
+      <h1 class="display-3">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>
+    </div>
     
 
     <div class="container">
@@ -84,39 +111,181 @@
             </div>
           </div>
     </div>
-
-    <div class="container">
-        <div class="row mb-2">
-            <div class="col-md-6">
-              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col p-4 d-flex flex-column position-static">
-                  <strong class="d-inline-block mb-2 text-primary">Sky 1</strong>
-                  <h3 class="mb-0">Featured post</h3>
-                  <div class="mb-1 text-muted">Nov 12</div>
-                  <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="stretched-link">Continue reading</a>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                    <img src="./img/sky1.jpg" width="200" height="250" alt="sky1">
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col p-4 d-flex flex-column position-static">
-                  <strong class="d-inline-block mb-2 text-success">Sky 2</strong>
-                  <h3 class="mb-0">Post title</h3>
-                  <div class="mb-1 text-muted">Nov 11</div>
-                  <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="stretched-link">Continue reading</a>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                    <img src="./img/sky2.jpg" width="200" height="250" alt="sky2">
-                </div>
-              </div>
-            </div>
-    </div>
+<hr>
+    <div class="container  ">
+      <div class="row mycards">
+          <div class="col-lg-3 col-md-3 col-sm-6 p-2">
+              <div class="card shadow bg-white rounded">
+                  <a href="#" class = "position-relative">
+                      <img src="https://placeimg.com/320/370/animals/sepia" class="card-img-top" alt="...">
+                      <div class="card-img-overlay text-center d-flex">
+                          <h2 class="w-100 align-self-center text-white mx-auto " style="text-shadow: 2px 2px 4px #000000;">Graphic Designer</h2>
+                      </div>            
+                  </a>
+              </div>        
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 p-2">
+              <div class="card shadow bg-white rounded">
+                  <a href="#" class = "position-relative">
+                      <img src="https://placeimg.com/320/370/nature" class="card-img-top" alt="...">
+                      <div class="card-img-overlay text-center d-flex">
+                          <h2 class="w-100 align-self-center text-white mx-auto " style="text-shadow: 2px 2px 4px #000000;">Video Editing</h2>
+                      </div>            
+                  </a>
+              </div>        
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 p-2">
+              <div class="card shadow bg-white rounded">
+                  <a href="#" class = "position-relative">
+                      <img src="https://placeimg.com/640/360/arch/grayscale" class="card-img-top" alt="...">
+                      <div class="card-img-overlay text-center d-flex">
+                          <h2 class="w-100 align-self-center text-white mx-auto " style="text-shadow: 2px 2px 4px #000000;">Social Media Advertising</h2>
+                      </div>            
+                  </a>
+              </div>        
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 p-2">
+              <div class="card shadow bg-white rounded">
+                  <a href="#" class = "position-relative">
+                      <img src="https://placeimg.com/640/360/arch/sepia" class="card-img-top" alt="...">
+                      <div class="card-img-overlay text-center d-flex">
+                          <h2 class="w-100 align-self-center text-white mx-auto " style="text-shadow: 2px 2px 4px #000000;">Website Development</h2>
+                      </div>            
+                  </a>
+              </div>        
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 p-2">
+              <div class="card shadow bg-white rounded">
+                  <a href="#" class = "position-relative">
+                      <img src="https://placeimg.com/320/370/nature/sepia" class="card-img-top" alt="...">
+                      <div class="card-img-overlay text-center d-flex">
+                          <h2 class="w-100 align-self-center text-white mx-auto " style="text-shadow: 2px 2px 4px #000000;">Copywriting</h2>
+                      </div>            
+                  </a>
+              </div>        
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 p-2">
+              <div class="card shadow bg-white rounded">
+                  <a href="#" class = "position-relative">
+                      <img src="https://placeimg.com/320/370/people" class="card-img-top" alt="...">
+                      <div class="card-img-overlay text-center d-flex">
+                          <h2 class="w-100 align-self-center text-white mx-auto " style="text-shadow: 2px 2px 4px #000000;">Translator</h2>
+                      </div>            
+                  </a>
+              </div>        
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 p-2">
+              <div class="card shadow bg-white rounded">
+                  <a href="#" class = "position-relative">
+                      <img src="https://placeimg.com/320/370/tech/sepia" class="card-img-top" alt="...">
+                      <div class="card-img-overlay text-center d-flex">
+                          <h2 class="w-100 align-self-center text-white mx-auto " style="text-shadow: 2px 2px 4px #000000;">2D/3D Animator</h2>
+                      </div>            
+                  </a>
+              </div>        
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 p-2">
+              <div class="card shadow bg-white rounded">
+                  <a href="#" class = "position-relative">
+                      <img src="https://placeimg.com/640/360/animals/grayscale" class="card-img-top" alt="...">
+                      <div class="card-img-overlay text-center d-flex">
+                          <h2 class="w-100 align-self-center text-white mx-auto " style="text-shadow: 2px 2px 4px #000000;">Storyboard Artist</h2>
+                      </div>            
+                  </a>
+              </div>        
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 p-2">
+              <div class="card shadow bg-white rounded">
+                  <a href="#" class = "position-relative">
+                      <img src="https://picsum.photos/320/370" class="card-img-top" alt="...">
+                      <div class="card-img-overlay text-center d-flex">
+                          <h2 class="w-100 align-self-center text-white mx-auto " style="text-shadow: 2px 2px 4px #000000;">etc</h2>
+                      </div>            
+                  </a>
+              </div>        
+          </div>
+      </div>
+  </div>   
+          <hr>
     
+          <div class="container">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9"><!--side panel left-->
+                      <div class="page-title">
+                          <div class="block-top-title">
+                              <ol class="breadcrumb"><li><a href="#"><span>Category</span></a></li><li>Vegetables</li></ol>        
+                              <h1 class="listing-title"> Vegetables </h1>
+                          </div>
+                      </div>
+                      <div class="card-deck">
+                          <div class="card border-primary mb-3" >
+                                  <div class="card-header">Header</div>
+          <div class="innerimg">
+            <img style="height: 200px; width: 100%; display: block;" src="img/veg1.jpg" alt="Card image">
+          </div>                                
+                                  <div class="card-body">
+                                      <h4 class="card-title">Primary card title</h4>
+                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  </div>
+                          </div>
+                          <div class="w-100 d-none d-sm-block d-lg-none"><!-- wrap every 1 on sm--></div>
+                          <div class="card border-primary mb-3" >
+                              <div class="card-header">Header</div>
+          <div class="innerimg">
+            <img style="height: 200px; width: 100%; display: block;" src="img/veg2.jpg" alt="Card image">
+          </div>                            
+                              <div class="card-body">
+                                  <h4 class="card-title">Primary card title</h4>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              </div>
+                          </div>
+                          <div class="w-100 d-none d-lg-block d-xl-none"><!-- wrap every 2 on lg--></div>
+                          <div class="card border-primary mb-3" >
+                              <div class="card-header">Header</div>
+          <div class="innerimg">
+            <img style="height: 200px; width: 100%; display: block;" src="img/veg3.jpg" alt="Card image">
+          </div> 
+                              <div class="card-body">
+                                  <h4 class="card-title">Primary card title</h4>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              </div>
+                          </div> 
+                          <div class="w-100 d-none d-xl-block"><!-- wrap every 3 on xl--></div>
+                          <div class="card border-primary mb-3" ><!--Vege 4-->
+                                  <div class="card-header">Header</div>
+          <div class="innerimg">
+            <img style="height: 200px; width: 100%; display: block;" src="img/veg4.jpg" alt="Card image">
+          </div> 
+                                  <div class="card-body">
+                                      <h4 class="card-title">Primary card title</h4>
+                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  </div>
+                          </div>
+                          <div class="w-100 d-none d-sm-block d-lg-none"><!-- wrap every 1 on sm--></div>
+                          <div class="card border-primary mb-3" >
+                              <div class="card-header">Header</div>
+          <div class="innerimg">
+            <img style="height: 200px; width: 100%; display: block;" src="img/veg5.jpg" alt="Card image">
+          </div> 
+                              <div class="card-body">
+                                  <h4 class="card-title">Primary card title</h4>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              </div>
+                          </div>
+                          <div class="w-100 d-none d-lg-block d-xl-none"><!-- wrap every 2 on lg--></div>
+                          <div class="card border-primary mb-3" >
+          <div class="innerimg">
+            <img style="height: 200px; width: 100%; display: block;" src="https://placeimg.com/400/370/tech/sepia" alt="Card image">
+          </div> 
+                              <div class="card-header">Header</div>                            
+                              <div class="card-body">
+                                  <h4 class="card-title">Primary card title</h4>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              </div>
+                          </div> 
+                          <div class="w-100 d-none d-xl-block"><!-- wrap every 3 on xl--></div>               
+                      </div>
+    <hr>
     <div class="container m-3" id="flower">
         <div class="row">
             <div class="card col-lg-4 col-md-4 col-sm-6 col-xm-12">
@@ -125,7 +294,9 @@
                 <h5 class="card-title">Flower 1 is my favorite</h5>
                 <h6 class="card-subtitle text-muted">Support card subtitle</h6>
                 </div>
+                <div class="innerimg">
                 <img style="height: 200px; width: 100%; display: block;" src="./img/flower1.jpg" alt="Flower1">
+                </div>
                 <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
@@ -136,7 +307,9 @@
                 <h5 class="card-title">I don't like flower 2</h5>
                 <h6 class="card-subtitle text-muted">Support card subtitle</h6>
                 </div>
-                <img style="height: 200px; width: 100%; display: block;" src="./img/flower2.jpg" alt="Flower2">
+                <div class="innerimg">
+                  <img style="height: 200px; width: 100%; display: block;" src="./img/flower2.jpg" alt="Flower2">
+                </div>
                 <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
@@ -147,7 +320,9 @@
                 <h5 class="card-title">Special title treatment</h5>
                 <h6 class="card-subtitle text-muted">Support card subtitle</h6>
                 </div>
-                <img style="height: 200px; width: 100%; display: block;" src="./img/flower3.jpg" alt="Flower2">
+                <div class="innerimg">
+                  <img style="height: 200px; width: 100%; display: block;" src="./img/flower3.jpg" alt="Flower3">
+                </div>
                 <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
@@ -158,7 +333,9 @@
                 <h5 class="card-title">Special title treatment</h5>
                 <h6 class="card-subtitle text-muted">Support card subtitle</h6>
                 </div>
-                <img style="height: 200px; width: 100%; display: block;" src="./img/flower4.jpg" alt="Flower4">
+                <div class="innerimg">
+                  <img style="height: 200px; width: 100%; display: block;" src="./img/flower4.jpg" alt="Flower4">
+                </div>
                 <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
@@ -166,10 +343,12 @@
             <div class="card col-lg-4 col-md-4 col-sm-6 col-xm-12">
                 <h3 class="card-header">Flower 5</h3>
                 <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
+                <h5 class="card-title">I like this flower very much</h5>
                 <h6 class="card-subtitle text-muted">Support card subtitle</h6>
                 </div>
-                <img style="height: 200px; width: 100%; display: block;" src="./img/flower5.jpg" alt="Flower5">
+                <div class="innerimg">
+                  <img style="height: 200px; width: 100%; display: block;" src="./img/flower5.jpg" alt="Flower5">
+                </div>
                 <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
